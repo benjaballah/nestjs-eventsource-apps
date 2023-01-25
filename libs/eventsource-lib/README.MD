@@ -204,7 +204,7 @@ export class HeroRepository {
 
 
 #### State of the art
-![State of the art](./docs/state.jpg)
+![State of the art](https://raw.githubusercontent.com/benjaballah/nestjs-eventsource-apps/master/libs/eventsource-lib/docs/state.jpg)
 
 
 After emitting an event, use a view updater to update the read database state.
@@ -227,5 +227,5 @@ export class UserCreatedUpdater implements IViewUpdater<UserCreatedEvent> {
 ## Reconstructing the view db
 
 ```ts
-await ReconstructViewDb.run(await NestFactory.create(AppModule.forRoot()));
+await ReconstructViewDb.run(await NestFactory.create(AppModule));
 ```
