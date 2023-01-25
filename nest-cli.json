@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/bi-synchro-service/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/bi-synchro-service/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/bi-synchro-service",
+  "projects": {
+    "bi-synchro-service": {
+      "type": "application",
+      "root": "apps/bi-synchro-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/bi-synchro-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bi-synchro-service/tsconfig.app.json"
+      }
+    },
+    "eventsource-lib": {
+      "type": "library",
+      "root": "libs/eventsource-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/eventsource-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/eventsource-lib/tsconfig.lib.json"
+      }
+    }
+  }
+}
